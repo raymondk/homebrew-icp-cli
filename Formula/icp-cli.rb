@@ -19,8 +19,9 @@ class IcpCli < Formula
 
   def install
     libexec.install "icp"
+    keg_launcher = Formula["icp-cli-network-launcher"].opt_bin/"icp-cli-network-launcher"
     icp_env = {
-      ICP_CLI_NETWORK_LAUNCHER_PATH: "${ICP_CLI_NETWORK_LAUNCHER_PATH:-#{Formula["icp-cli-network-launcher"].opt_bin}}",
+      ICP_CLI_NETWORK_LAUNCHER_PATH: "${ICP_CLI_NETWORK_LAUNCHER_PATH:-#{keg_launcher}}",
     }
     (bin/"icp").write_env_script libexec/"icp", icp_env
   end
