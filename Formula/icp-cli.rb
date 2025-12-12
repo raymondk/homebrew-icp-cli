@@ -2,7 +2,9 @@ class IcpCli < Formula
   desc "CLI tool for developing and deploying application on the Internet Computer Protocol (ICP)"
   homepage "https://github.com/dfinity/icp-cli"
   version "v0.1.0-beta.0"
-  license "MIT"
+  license "Apache-2.0"
+
+  depends_on "icp-cli-network-launcher"
 
   on_macos do
     on_arm do
@@ -16,7 +18,12 @@ class IcpCli < Formula
   end
 
   def install
-    bin.install "icp"
+    libexec.install "icp"
+    keg_launcher = Formula["icp-cli-network-launcher"].opt_bin/"icp-cli-network-launcher"
+    icp_env = {
+      ICP_CLI_NETWORK_LAUNCHER_PATH: "${ICP_CLI_NETWORK_LAUNCHER_PATH:-#{keg_launcher}}",
+    }
+    (bin/"icp").write_env_script libexec/"icp", icp_env
   end
 
   test do
