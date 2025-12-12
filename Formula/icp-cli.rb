@@ -1,7 +1,7 @@
 class IcpCli < Formula
   desc "CLI tool for developing and deploying application on the Internet Computer Protocol (ICP)"
   homepage "https://github.com/dfinity/icp-cli"
-  version "v0.1.0-beta.0"
+  version "v0.1.0-beta.1"
   license "Apache-2.0"
 
   depends_on "icp-cli-network-launcher"
@@ -9,11 +9,11 @@ class IcpCli < Formula
   on_macos do
     on_arm do
       url "https://github.com/dfinity/icp-cli/releases/download/#{version}/icp-cli-#{version}-aarch64-darwin.tar.gz"
-      sha256 "dd6819d126c205d009de9ae2cc8a386810e7241af5bc000b687e5a357f535906"
+      sha256 "fc7176bb3760c5c6292827c0a15657a02dfd3c91f98bfa8b05bedc2f5ec3b7da"
     end
     on_intel do
       url "https://github.com/dfinity/icp-cli/releases/download/#{version}/icp-cli-#{version}-x86_64-darwin.tar.gz"
-      sha256 "c4901c92a6faa423aa95acbd9c05ceaf2d51abbf3f47b527f4bd151398a30bb2"
+      sha256 "44a8349a8405ec61ed5f6760ee75e9c077c7c732e75bcc24d7c23236aea6640e"
     end
   end
 
