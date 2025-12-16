@@ -1,14 +1,13 @@
 class IcpCli < Formula
-  desc "CLI tool for developing and deploying application on the Internet Computer Protocol (ICP)"
+  desc "Development tool for building and deploying canisters on ICP"
   homepage "https://github.com/dfinity/icp-cli"
-  version "v0.1.0-beta.1"
-  url "https://github.com/dfinity/icp-cli/archive/refs/tags/#{version}.tar.gz"
+  url "https://github.com/dfinity/icp-cli/archive/refs/tags/v0.1.0-beta.1.tar.gz"
   sha256 "4db000d9d38d6ea14fd28f079f9e9aa15a27f0c0a55def66b1c651735dba9368"
   license "Apache-2.0"
 
   depends_on "rust" => :build
-  depends_on "icp-cli-network-launcher"
   depends_on "ic-wasm"
+  depends_on "icp-cli-network-launcher"
 
   def install
     system "cargo", "install", *std_cargo_args(root: libexec, path: "crates/icp-cli")
