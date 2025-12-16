@@ -6,9 +6,9 @@ class IcpCli < Formula
   license "Apache-2.0"
 
   depends_on "rust" => :build
-  depends_on "openssl@3"
   depends_on "ic-wasm"
   depends_on "icp-cli-network-launcher"
+  depends_on "openssl@3"
 
   def install
     system "cargo", "install", *std_cargo_args(root: libexec, path: "crates/icp-cli")
