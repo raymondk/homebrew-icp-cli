@@ -5,6 +5,7 @@ class IcpCli < Formula
   license "Apache-2.0"
 
   depends_on "icp-cli-network-launcher"
+  depends_on "ic-wasm"
 
   on_macos do
     on_arm do
