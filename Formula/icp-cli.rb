@@ -6,6 +6,13 @@ class IcpCli < Formula
   license "Apache-2.0"
   revision 1
 
+  bottle do
+    root_url "https://github.com/raymondk/homebrew-icp-cli/releases/download/icp-cli-0.1.0-beta.1_1"
+    sha256 cellar: :any,                 arm64_sequoia: "54d88d1264a4940c654275d5bf5b23d4b701b7ae24bfc080d33bb8ec2def17e7"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "ae4d7dc1a71d10fb470876e1c2fb6a13dd9e2b5165946bf3de32b281a3651f53"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5f93db72bb19bdb84612285b43f14b57faeec8ab1f0dccec08a751a345d340e7"
+  end
+
   depends_on "rust" => :build
   depends_on "ic-wasm"
   depends_on "icp-cli-network-launcher"
