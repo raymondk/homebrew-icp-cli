@@ -6,6 +6,13 @@ class IcWasm < Formula
   license "Apache-2.0"
   revision 1
 
+  bottle do
+    root_url "https://github.com/raymondk/homebrew-icp-cli/releases/download/ic-wasm-0.9.9_1"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "62b4c2535092d36d604ec5f5a0c213bc59ae58f32adeae420718ef23bf88f646"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "dd1f6380a798cc4f721610f15af1b4c6965613a76f2f2d94e52f5d06ae878464"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "66ed744e7cd6a8560ff377ae4eea05ce5eeb638b46fed46bcfce3150997850c4"
+  end
+
   depends_on "rust" => :build
 
   def install
