@@ -4,7 +4,6 @@ class IcpCli < Formula
   url "https://github.com/dfinity/icp-cli/archive/refs/tags/v0.1.0-beta.2.tar.gz"
   sha256 "e3ee62316142805aa5254c61cfb6bbb8aa6579c746538db7792d777edd62b576"
   license "Apache-2.0"
-  revision 1
 
   bottle do
     root_url "https://github.com/raymondk/homebrew-icp-cli/releases/download/icp-cli-0.1.0-beta.1_1"
