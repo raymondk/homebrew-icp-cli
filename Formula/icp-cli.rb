@@ -6,10 +6,10 @@ class IcpCli < Formula
   license "Apache-2.0"
 
   bottle do
-    root_url "https://github.com/raymondk/homebrew-icp-cli/releases/download/icp-cli-0.1.0-beta.1_1"
-    sha256 cellar: :any,                 arm64_sequoia: "54d88d1264a4940c654275d5bf5b23d4b701b7ae24bfc080d33bb8ec2def17e7"
-    sha256 cellar: :any_skip_relocation, arm64_linux:   "ae4d7dc1a71d10fb470876e1c2fb6a13dd9e2b5165946bf3de32b281a3651f53"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "5f93db72bb19bdb84612285b43f14b57faeec8ab1f0dccec08a751a345d340e7"
+    root_url "https://github.com/raymondk/homebrew-icp-cli/releases/download/icp-cli-0.1.0-beta.2"
+    sha256 cellar: :any,                 arm64_sequoia: "d6d983f77c19fc01ced275c8e6d894ad8ab21a25ff68549691400c9fa7cb499d"
+    sha256 cellar: :any_skip_relocation, arm64_linux:   "c60c20d6a26326666c60f12c9396791a09002729480f8110094c606e850ee26d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7038cb7bfdfbb995c16f879c45f3f0830d23c4218731ef2166006e09749113f5"
   end
 
   depends_on "rust" => :build
